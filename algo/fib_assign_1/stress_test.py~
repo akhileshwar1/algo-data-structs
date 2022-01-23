@@ -1,0 +1,11 @@
+# uses python3
+# general skeleton for stress testing
+def stress_gen(naive, opt, n, high, low):
+    while True:
+        n = random.randint(low, high)
+        print(n)
+        naive_result = naive(n)
+        opt_result = opt(n)
+
+        if(naive_result != opt_result):
+            print(f'invalid for input case {n}')

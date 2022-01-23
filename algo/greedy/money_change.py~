@@ -1,0 +1,15 @@
+# uses python3
+def money_change(n, divisors, total):
+    print(divisors)
+    denominator = divisors.pop()
+    if len(divisors) == 0:
+        return (total + n/denominator)
+    print(n % denominator)
+    print(n / denominator)
+    return money_change(int(n % denominator), divisors, total + int(n/denominator))
+
+
+n = int(input())
+print(money_change(n, [1, 5, 10], 0))
+# O(1)
+# but there must be a problem with mod because the course guys used minus.

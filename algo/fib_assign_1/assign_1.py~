@@ -1,0 +1,13 @@
+# Uses python3
+def calc_fib(n):
+    if(n <= 45 and n >= 0):
+        if (n <= 1):
+            return n
+
+        return calc_fib(n - 1) + calc_fib(n - 2)
+    else:
+        return None
+
+
+# n = int(input())
+# print(calc_fib(n))
